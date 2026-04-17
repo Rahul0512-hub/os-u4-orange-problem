@@ -26,3 +26,32 @@ PES-VCS allows users to:
 ---
 
 ## 📁 Repository Structure
+
+.pes/
+ ├── objects/        # Stores file contents using hash
+ ├── index           # Staging area
+ ├── refs/heads/     # Branch pointers
+ └── HEAD            # Points to current branch
+
+---
+
+## 🛠️ Commands Implemented
+
+- `pes init` → Initialize repository  
+- `pes add <file>` → Add file to staging area  
+- `pes status` → Show staged files  
+- `pes commit -m "message"` → Create a commit  
+- `pes log` → Display commit history  
+
+---
+
+## ▶️ How to Run
+
+```bash
+make
+./pes init
+echo "hello" > a.txt
+./pes add a.txt
+./pes status
+./pes commit -m "first commit"
+./pes log
